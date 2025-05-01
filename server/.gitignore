@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-/server/public/uploads/
+server/public/uploads/
 /.pnp
 .pnp.js
 # testing
