@@ -4,7 +4,7 @@ const multer = require("multer");
 const Listing = require("../models/Listing");
 const User = require("../models/User");
 
-const storage = require("../cloudinaryConfig");
+const { storage } = require("../cloudinaryConfig");
 
 /* Configuration Multer for File Upload */
 // const storage = multer.diskStorage({

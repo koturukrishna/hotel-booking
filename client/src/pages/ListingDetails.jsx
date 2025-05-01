@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `https://hotel-booking-app-s8g5.onrender.com/properties/${listingId}`,
+        `http://localhost:3001/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -38,7 +38,7 @@ const ListingDetails = () => {
     getListingDetails();
   }, []);
 
-  console.log(listing);
+  // console.log(listing);
 
   /* BOOKING CALENDAR */
   const [dateRange, setDateRange] = useState([
@@ -74,16 +74,13 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       };
 
-      const response = await fetch(
-        "https://hotel-booking-app-s8g5.onrender.com/bookings/create",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(bookingForm),
-        }
-      );
+      const response = await fetch("http://localhost:3001/bookings/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(bookingForm),
+      });
 
       if (response.ok) {
         navigate(`/${customerId}/trips`);
@@ -107,14 +104,7 @@ const ListingDetails = () => {
 
         <div className="photos">
           {listing.listingPhotoPaths?.map((item, index) => (
-            <img
-              alt="kriimage"
-              key={index}
-              src={`https://hotel-booking-app-s8g5.onrender.com/${item.replace(
-                "public",
-                ""
-              )}`}
-            />
+            <img alt={item} key={index} src={item} />
           ))}
         </div>
 
@@ -130,10 +120,8 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            alt="kriimage"
-            src={`https://hotel-booking-app-s8g5.onrender.com/${listing.creator.profileImagePath?.replace(
-              "public"
-            )}`}
+            alt={listing.creator.firstName}
+            src={listing.creator.profileImagePath}
           />
           <h3>
             Hosted by {listing.creator.firstName} {listing.creator.lastName}

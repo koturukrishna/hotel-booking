@@ -18,7 +18,7 @@ const SearchPage = () => {
   const getSearchListings = async () => {
     try {
       const response = await fetch(
-        `https://hotel-booking-app-s8g5.onrender.com/properties/search/${search}`,
+        `http://localhost:3001/properties/search/${search}`,
         {
           method: "GET",
         }

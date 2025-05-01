@@ -16,16 +16,13 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        "https://hotel-booking-app-s8g5.onrender.com/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        }
-      );
+      const response = await fetch("http://localhost:3001/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
       /* Get data after fetching */
       const loggedIn = await response.json();

@@ -17,7 +17,7 @@ const TripList = () => {
   const getTripList = async () => {
     try {
       const response = await fetch(
-        `https://hotel-booking-app-s8g5.onrender.com/users/${userId}/trips`,
+        `http://localhost:3001/users/${userId}/trips`,
         {
           method: "GET",
         }
@@ -52,6 +52,7 @@ const TripList = () => {
             booking = true,
           }) => (
             <ListingCard
+              key={listingId._id}
               listingId={listingId._id}
               creator={hostId._id}
               listingPhotoPaths={listingId.listingPhotoPaths}

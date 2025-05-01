@@ -26,6 +26,7 @@ const WishList = () => {
             booking = false,
           }) => (
             <ListingCard
+              key={_id}
               listingId={_id}
               creator={creator}
               listingPhotoPaths={listingPhotoPaths}

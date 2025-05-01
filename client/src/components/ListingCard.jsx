@@ -53,7 +53,7 @@ const ListingCard = ({
     // debugger;
     if (user?._id !== creator._id) {
       const response = await fetch(
-        `https://hotel-booking-app-s8g5.onrender.com/users/${user?._id}/${listingId}`,
+        `http://localhost:3001/users/${user?._id}/${listingId}`,
         {
           method: "PATCH",
           header: {
@@ -82,13 +82,7 @@ const ListingCard = ({
         >
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
-              <img
-                src={`https://hotel-booking-app-s8g5.onrender.com/${photo?.replace(
-                  "public",
-                  ""
-                )}`}
-                alt={`photo${index + 1}`}
-              />
+              <img src={photo} alt={photo} />
               <div
                 className="prev-button"
                 onClick={(e) => {

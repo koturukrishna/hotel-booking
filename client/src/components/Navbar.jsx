@@ -61,10 +61,7 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`https://hotel-booking-app-s8g5.onrender.com/${user.profileImagePath.replace(
-                "public",
-                ""
-              )}`}
+              src={user.profileImagePath}
               alt="profile_image"
               style={{ objectFit: "cover", borderRadius: "50%" }}
             />
