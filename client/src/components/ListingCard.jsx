@@ -53,7 +53,7 @@ const ListingCard = ({
     // debugger;
     if (user?._id !== creator._id) {
       const response = await fetch(
-        `https://hotel-booking-system-pesy.onrender.com/users/${user?._id}/${listingId}`,
+        `https://hotel-booking-app-s8g5.onrender.com/users/${user?._id}/${listingId}`,
         {
           method: "PATCH",
           header: {
@@ -83,7 +83,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`https://hotel-booking-system-pesy.onrender.com/${photo?.replace(
+                src={`https://hotel-booking-app-s8g5.onrender.com/${photo?.replace(
                   "public",
                   ""
                 )}`}

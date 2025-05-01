@@ -17,7 +17,7 @@ const LoginPage = () => {
 
     try {
       const response = await fetch(
-        "https://hotel-booking-system-pesy.onrender.com/auth/login",
+        "https://hotel-booking-app-s8g5.onrender.com/auth/login",
         {
           method: "POST",
           headers: {

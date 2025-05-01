@@ -43,7 +43,7 @@ const RegisterPage = () => {
       }
 
       const response = await fetch(
-        "https://hotel-booking-system-pesy.onrender.com/auth/register",
+        "https://hotel-booking-app-s8g5.onrender.com/auth/register",
         {
           method: "POST",
           body: register_form,

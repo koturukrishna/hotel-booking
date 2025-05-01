@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `https://hotel-booking-system-pesy.onrender.com/properties/${listingId}`,
+        `https://hotel-booking-app-s8g5.onrender.com/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -75,7 +75,7 @@ const ListingDetails = () => {
       };
 
       const response = await fetch(
-        "https://hotel-booking-system-pesy.onrender.com/bookings/create",
+        "https://hotel-booking-app-s8g5.onrender.com/bookings/create",
         {
           method: "POST",
           headers: {
@@ -110,7 +110,7 @@ const ListingDetails = () => {
             <img
               alt="kriimage"
               key={index}
-              src={`https://hotel-booking-system-pesy.onrender.com/${item.replace(
+              src={`https://hotel-booking-app-s8g5.onrender.com/${item.replace(
                 "public",
                 ""
               )}`}
@@ -131,7 +131,7 @@ const ListingDetails = () => {
         <div className="profile">
           <img
             alt="kriimage"
-            src={`https://hotel-booking-system-pesy.onrender.com/${listing.creator.profileImagePath?.replace(
+            src={`https://hotel-booking-app-s8g5.onrender.com/${listing.creator.profileImagePath?.replace(
               "public"
             )}`}
           />

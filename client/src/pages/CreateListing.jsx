@@ -138,7 +138,7 @@ const CreateListing = () => {
 
       /* Send a POST request to server */
       const response = await fetch(
-        "https://hotel-booking-system-pesy.onrender.com/properties/create",
+        "https://hotel-booking-app-s8g5.onrender.com/properties/create",
         {
           method: "POST",
           body: listingForm,

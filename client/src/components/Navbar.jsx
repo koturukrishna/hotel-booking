@@ -61,7 +61,7 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`https://hotel-booking-system-pesy.onrender.com/${user.profileImagePath.replace(
+              src={`https://hotel-booking-app-s8g5.onrender.com/${user.profileImagePath.replace(
                 "public",
                 ""
               )}`}

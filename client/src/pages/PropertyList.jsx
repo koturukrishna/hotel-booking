@@ -17,7 +17,7 @@ const PropertyList = () => {
   const getPropertyList = async () => {
     try {
       const response = await fetch(
-        `https://hotel-booking-system-pesy.onrender.com/users/${user._id}/properties`,
+        `https://hotel-booking-app-s8g5.onrender.com/users/${user._id}/properties`,
         {
           method: "GET",
         }

@@ -18,7 +18,7 @@ const CategoryPage = () => {
   const getFeedListings = async () => {
     try {
       const response = await fetch(
-        `https://hotel-booking-system-pesy.onrender.com/properties?category=${category}`,
+        `https://hotel-booking-app-s8g5.onrender.com/properties?category=${category}`,
         {
           method: "GET",
         }

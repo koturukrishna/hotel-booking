@@ -18,8 +18,8 @@ const Listings = () => {
     try {
       const response = await fetch(
         selectedCategory !== "All"
-          ? `https://hotel-booking-system-pesy.onrender.com/properties?category=${selectedCategory}`
-          : "https://hotel-booking-system-pesy.onrender.com/properties",
+          ? `https://hotel-booking-app-s8g5.onrender.com/properties?category=${selectedCategory}`
+          : "https://hotel-booking-app-s8g5.onrender.com/properties",
         {
           method: "GET",
         }
